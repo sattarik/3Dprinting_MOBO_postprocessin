@@ -1,4 +1,4 @@
-R1(HA),R2(IA),R3(NVP),R4(AA),R5(HEAA),R6(IBOA),Printability,Tg,Strength,Toughness
+R1(HA),R2(IA),R3(NVP),R4(AA),R5(HEAA),R6(IBOA),Printability,Tg,Tensile_Strength(MPa),Toughness(MJ/m3)
 0.29,0,0.06,0.23,0.31,0.11,1,56.4,-29.22,-0.62
 0.23,0,0.07,0.31,0.33,0.06,1,60.8,-30.68,-0.7
 0.37,0.17,0.1,0.04,0.2,0.12,1,44.2,-36.98,-0.94
