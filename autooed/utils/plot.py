@@ -104,10 +104,11 @@ def plot_performance_space_diffcolor(Y0, Y_eval):
 def plot_performance_metric(Y, obj_type):
     '''
     '''
-    fig, ax = plt.subplots(figsize=(6, 4))
+    fig, ax = plt.subplots(figsize=(5, 4))
+    [i.set_linewidth(2) for i in ax.spines.values()]
     ax.tick_params(length=4, width=2, colors='black', grid_alpha=0, labelsize='15')
-    ax.set_xlabel('Iterations', fontsize='18', fontname='Arial', fontweight='bold')
-    ax.set_ylabel('Hypervolume', fontsize='18', fontname='Arial', fontweight='bold')
+    ax.set_xlabel('Iteration #', fontsize='20', fontname='Arial', fontweight='bold')
+    ax.set_ylabel('Hypervolume', fontsize='20', fontname='Arial', fontweight='bold')
     if Y.shape[1] == 1:
         opt_list = []
         if obj_type == ['min']:
@@ -130,9 +131,9 @@ def plot_performance_metric(Y, obj_type):
             hv_list.append(hv)
         
         plt.plot(np.arange(1, len(Y)), hv_list, linewidth=2)
-        plt.title('HVE', fontsize=18)
+        #plt.title('HVE', fontsize=18)
     else:
         raise Exception(f'Invalid objective dimension {Y.shape[1]}')
-    mpl.rcParams['axes.linewidth'] = 2 
+    mpl.rcParams['axes.linewidth'] = 2
     plt.tight_layout()
     plt.savefig('HVE.png', dpi=300)
